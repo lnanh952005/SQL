@@ -1,0 +1,66 @@
+use northwind;
+-- select * from customers
+-- cau 1:
+
+-- cau 2:
+-- where strcmp(city,"berlin") = 0; 
+-- cau 3:
+-- where strcmp(city,"berlin") <> 0;
+-- cau 4:
+-- where strcmp(city,"london") = 0 && CustomerID % 2 = 0; 
+-- cau 5:
+-- where left(CustomerName,1) ='a';
+-- where customername like"a%";
+-- cau 6:
+-- where left(CustomerName,1) in ("a","b","d");
+-- cau 7:
+-- where CustomerName like "a%e";
+-- where left(CustomerName,1)='a' && right(CustomerName,1)='e';
+-- cau 8:
+-- where length(customername) >= 25;
+-- cau 9:
+-- where right(CustomerName,3) = "sen";
+-- where CustomerName like "%sen";
+-- cau 10:
+-- where CustomerName like "cen%";employees
+-- cau 11:
+-- where strcmp(CustomerName,"harani canes") > 0;
+-- where CustomerName > "harani canes";
+-- select * from employees
+-- cau 12:
+-- where year(birthdate) = 1968;
+-- cau 13:
+-- where month(birthdate) = 2;
+-- cau 14:
+-- where day(BirthDate) = 2;
+-- select * from customers 
+-- cau 15:
+-- where customername like "%ar%";
+-- cau 16:
+-- where CustomerName like "b%e";
+-- cau 17:
+-- where CustomerName like "_r%";
+-- cau 18:
+-- where CustomerName like "%h__";
+-- cau 19:
+-- where left(customername,1) in ('a','b','d','h');
+-- cau 20:
+-- where right(customername,1) in ('a','b','d','h');
+-- cau 21:
+where year(orderdate) = 1996 && month(orderdate) = 2 && strcmp(city,'london') = 0;
+-- cau 22:
+
+-- cau 23:
+
+-- cau 24:
+
+-- cau 25:
+
+-- cau 26:
+
+-- cau 27:
+
+
+
+
+
