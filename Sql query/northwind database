@@ -46,21 +46,20 @@ use northwind;
 -- where left(customername,1) in ('a','b','d','h');
 -- cau 20:
 -- where right(customername,1) in ('a','b','d','h');
+-- select * from customers, orders
 -- cau 21:
-where year(orderdate) = 1996 && month(orderdate) = 2 && strcmp(city,'london') = 0;
+-- where customers.CustomerID = orders.CustomerID and month(orderdate) = 7 and year(orderdate) = 1996;
 -- cau 22:
-
+-- where customers.CustomerID = orders.CustomerID and month(orderdate) = 12 and year(orderdate) = 1996 and country = 'USA';
 -- cau 23:
-
+-- where customers.CustomerID = orders.CustomerID and date(orderdate) > '1996-10-09' and city='london';
 -- cau 24:
-
+-- where customers.CustomerID = orders.CustomerID and month(orderdate) = 10 and year(orderdate)=1996 and ShipperID=3;
 -- cau 25:
-
+-- where orders.EmployeeID = 4;
 -- cau 26:
-
+-- select * from employees,orders
+-- where employees.EmployeeID = orders.EmployeeID and firstname='nancy';
 -- cau 27:
-
-
-
-
-
+-- select * from products,orderdetails
+-- where products.ProductID = orderdetails.ProductID and OrderID = 10249;
