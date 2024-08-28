@@ -4,3 +4,17 @@ where
 group by
 having
 order by
+-----------------
+use database
+update table
+set col = ???
+where condition
+--------------
+use database
+delete from table
+where condition
+------------------
+select customer_name, concat_ws(',',address,number,city,country) as address 
+from table
+----------------
+
