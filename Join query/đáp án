@@ -1,0 +1,11 @@
+câu 1:
+select name,cust_name,salesman.city from salesman
+inner join customer
+on salesman.city = customer.city;
+
+câu 2:
+select ord_no,purch_amt,cust_name,customer.city from orders
+inner join customer
+on customer.customer_id = orders.customer_id and purch_amt between 500 and 2000;
+
+câu 3:
