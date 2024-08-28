@@ -23,3 +23,16 @@ select cust_name,customer.city, name, salesman.city,commission from customer
 inner join salesman
 on customer.salesman_id = salesman.salesman_id
 where customer.city != salesman.city and commission > 0.12;
+
+câu 6:
+select ord_no,ord_date,purch_amt,cust_name,grade,name,commission from orders
+inner join customer
+on orders.customer_id = customer.customer_id
+inner join salesman
+on orders.salesman_id = salesman.salesman_id;
+
+câu 7:
+select cust_name,customer.city,grade,name,salesman.city from customer
+inner join salesman
+on customer.salesman_id = salesman.salesman_id
+order by customer_id;
