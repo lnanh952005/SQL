@@ -9,3 +9,6 @@ inner join customer
 on customer.customer_id = orders.customer_id and purch_amt between 500 and 2000;
 
 câu 3:
+select cust_name,customer.city,name,commission from customer
+inner join salesman
+on customer.salesman_id = salesman.salesman_id;
