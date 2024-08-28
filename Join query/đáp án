@@ -56,3 +56,8 @@ left join salesman
 on salesman.salesman_id = customer.salesman_id;
 
 câu 11:
+select cust_name,customer.city,grade,name as Salesman, salesman.city
+from salesman
+left join customer
+on customer.salesman_id = salesman.salesman_id
+order by salesman.salesman_id,cust_name;
