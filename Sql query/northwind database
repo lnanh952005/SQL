@@ -1,7 +1,7 @@
 use northwind;
 -- select * from customers
 -- cau 1:
-
+-- group by city;
 -- cau 2:
 -- where strcmp(city,"berlin") = 0; 
 -- cau 3:
