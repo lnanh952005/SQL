@@ -19,3 +19,7 @@ inner join salesman
 on customer.salesman_id = salesman.salesman_id and commission > 0.12;
 
 câu 5:
+select cust_name,customer.city, name, salesman.city,commission from customer
+inner join salesman
+on customer.salesman_id = salesman.salesman_id
+where customer.city != salesman.city and commission > 0.12;
