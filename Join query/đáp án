@@ -36,3 +36,23 @@ select cust_name,customer.city,grade,name,salesman.city from customer
 inner join salesman
 on customer.salesman_id = salesman.salesman_id
 order by customer_id;
+
+câu 8:
+select cust_name,customer.city,grade,name,salesman.city from customer
+inner join salesman
+on customer.salesman_id = salesman.salesman_id
+
+câu 9:
+select cust_name,customer.city,ord_no,ord_date,purch_amt from customer
+inner join orders
+on customer.customer_id = orders.customer_id
+order by ord_date;
+
+câu 10:
+select cust_name,customer.city,ord_no,ord_date,purch_amt,name,commission from customer
+left join orders
+on orders.customer_id = customer.customer_id
+left join salesman
+on salesman.salesman_id = customer.salesman_id;
+
+câu 11:
