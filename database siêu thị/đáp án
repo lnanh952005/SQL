@@ -1,0 +1,25 @@
+câu 1:
+use sieuthi;
+select tenbp,bophan.mabp
+from bophan
+inner join mathang
+on bophan.mabp = mathang.mabp
+where mathang.tenmh = 'Thanh Long';
+
+câu 2:
+use sieuthi;
+select mathang.tenmh,mathang.masmh
+from mathang
+where mathang.mabp = 'BP001';
+
+câu 3:
+use sieuthi;
+select a.tenmh,a.mabp,b.mancc,c.tenncc
+from (mathang a
+inner join cungcap b
+on b.masmh = a.masmh)
+inner join nguoicungcap c
+on c.mancc = b.mancc
+where a.masmh = 'MH01';
+
+câu 4:
