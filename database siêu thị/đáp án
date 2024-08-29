@@ -23,3 +23,10 @@ on c.mancc = b.mancc
 where a.masmh = 'MH01';
 
 câu 4:
+use sieuthi;
+select nguoicungcap.mancc,nguoicungcap.tenncc,nguoicungcap.diachincc
+from nguoicungcap 
+inner join cungcap
+on cungcap.mancc = nguoicungcap.mancc
+group by nguoicungcap.mancc,nguoicungcap.tenncc
+order by count(nguoicungcap.mancc) desc,nguoicungcap.mancc desc
