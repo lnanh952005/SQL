@@ -50,3 +50,29 @@ on chitietdonhang.masmh = mathang.masmh
 where khachhang.makh = 'KH002';
 
 câu 7:
+
+
+câu 9:
+use sieuthi;
+select khachhang.makh,khachhang.tenkh,donhang.sohieuddh
+from khachhang
+inner join donhang
+on donhang.makh = khachhang.makh
+where month(donhang.ngaydh) = 12 and year(donhang.ngaydh) = 2023;
+
+câu 10:
+use sieuthi;
+select sum(chitietdonhang.dongia * chitietdonhang.soluong)
+from donhang
+inner join chitietdonhang
+on donhang.sohieuddh = chitietdonhang.sohieuddh
+where donhang.makh = 'KH002' and chitietdonhang.masmh = 'MH01';
+
+câu 13:
+use sieuthi;
+select khachhang.tenkh,khachhang.diachikh
+from khachhang
+inner join donhang
+on donhang.makh = khachhang.makh
+where donhang.sohieuddh in ('DDH07','DDH08','DDH02')
+group by khachhang.makh;
