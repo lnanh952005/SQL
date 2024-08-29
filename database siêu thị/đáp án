@@ -30,3 +30,23 @@ inner join cungcap
 on cungcap.mancc = nguoicungcap.mancc
 group by nguoicungcap.mancc,nguoicungcap.tenncc
 order by count(nguoicungcap.mancc) desc,nguoicungcap.mancc desc
+
+câu 5:
+use sieuthi;
+select count(chitietdonhang.sohieuddh), sum(chitietdonhang.soluong)
+from chitietdonhang
+where chitietdonhang.sohieuddh = 'DDH01';
+
+câu 6:
+use sieuthi;
+select khachhang.tenkh,chitietdonhang.sohieuddh,mathang.masmh,khachhang.makh,chitietdonhang.soluong
+from khachhang
+inner join donhang
+on khachhang.makh = donhang.makh
+inner join chitietdonhang
+on chitietdonhang.sohieuddh = donhang.sohieuddh
+inner join mathang
+on chitietdonhang.masmh = mathang.masmh
+where khachhang.makh = 'KH002';
+
+câu 7:
