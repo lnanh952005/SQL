@@ -1,0 +1,79 @@
+create database shopapp;
+use shopapp;
+create table users(
+	id int primary key auto_increment,
+    fullname varchar(100) not null,
+    phone_number varchar(100) not null,
+    address varchar(100) not null,
+    username varchar(100) not null,
+    password varchar(100) not null, --
+    created_at datetime,
+    updated_at datetime,
+    is_active int default 1,
+    birth date
+);
+
+create table tokens(
+	id int primary key auto_increment,
+    token varchar(100) not null,
+    token_type varchar(100) not null,
+    expiration_date datetime not null,
+    revoked int not null,
+    expired int not null,
+    user_id int not null,
+    foreign key(user_id) references users(id)
+);
+
+create table social_accounts(
+	id int primary key auto_increment,
+    provider varchar(100) not null,
+    email varchar(100) not null,
+    user_name varchar(100) not null,
+    user_id int not null,
+    foreign key(user_id) references users(id)
+);
+
+create table categories(
+	id int primary key auto_increment,
+ name varchar(100) not null
+);
+
+create table products(
+	id int primary key auto_increment,
+    name varchar(100),
+    price double not null,
+    thumbnail varchar(100),
+    description varchar(100),
+    created_at datetime,
+    updated_at datetime,
+    category_id int,
+    foreign key(category_id) references categories(id)
+);
+alter table users add column role_id int not null;
+
+create table roles(
+	id int primary key,
+    name varchar(100) not null
+);
+alter table users add foreign key(role_id) references roles(id);
+
+create table orders(
+	id int primary key auto_increment,
+    address varchar(100),
+    note varchar(100),
+    order_date datetime,
+    total_money double,
+    user_id int,
+    foreign key(user_id) references users(id)
+);
+
+create table order_details(
+	id int primary key auto_increment,
+    order_id int,
+    foreign key(order_id) references orders(id),
+    product_id int,
+    foreign key(product_id) references products(id),
+    price double,
+    number_of_product int,
+    total_money double
+);
